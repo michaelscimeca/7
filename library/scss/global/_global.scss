@@ -1,0 +1,228 @@
+/************************************
+* Admin Bar location
+************************************/
+#wpadminbar {
+  position: fixed !important;
+}
+
+// ::-webkit-scrollbar {
+//   display: none;
+// }
+
+
+.dg {
+  z-index: 333!important;
+}
+body,
+html {
+  position: relative;
+  height: 100%;
+  // @include Raleway;
+  background-color: $secondary;
+  background: linear-gradient(to right, rgba(147,82,255,1) 2%,rgba(101,8,255,1) 100%);
+  color: $white;
+
+  &:before {
+    content: '';
+    position: fixed;
+    top: -20%;
+    left: -20%;
+    z-index: 1;
+    width: 150vw;
+    height: 150vh;
+    background-image: url($theme-path + 'bg/bg.png');
+    background-position: 0 0;
+    background-size: 170px;
+    background-repeat: repeat;
+    background-attachment: fixed;
+    opacity: .2;
+    pointer-events: none;
+    animation:grain 1.5s steps(6) infinite;
+
+  }
+}
+
+@keyframes grain {
+  0%, 100% {transform: translate(0,0);}
+  10% {transform: translate(-5%,-10%);}
+  30% {transform: translate(3%,-15%);}
+  50% {transform: translate(12%,9%);}
+  70% {transform: translate(9%,4%);}
+  90% {transform: translate(-1%,7%);}
+}
+
+canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  height: 100vh;
+  width: 100vw;
+}
+
+#app {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  z-index: 2;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  // margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+span,
+p,
+a {
+  @include breakpoint(medium) {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+h1 {
+  @include h1;
+}
+h2 {
+  @include h2;
+}
+h3 {
+  @include h3;
+}
+h4 {
+  @include h4;
+}
+h5 {
+  @include h5;
+}
+h6 {
+  @include h6;
+}
+
+p {
+  @include Raleway;
+  @include p;
+}
+
+.p-xlarge {
+  @include p-xlarge;
+}
+
+.p-large {
+  @include p-large;
+}
+
+.p-xmedium {
+  @include p-xmedium;
+}
+
+.p-medium {
+  @include p-medium;
+}
+
+.p-xsmall {
+  @include p-xsmall;
+}
+
+.p-small {
+  @include p-small;
+}
+
+a {
+  color: $white;
+  text-decoration: none;
+  &:active,
+  &:hover,
+  &:focus,
+  &:visited {
+    color: $white;
+    outline: none;
+  }
+
+  @include hover {
+    color: rgba($white, 0.8);
+  }
+}
+
+ul,
+ol ol,
+ol ul,
+ul ol,
+ul ul {
+  margin: 0;
+  padding: 0;
+
+  li {
+    list-style: none;
+  }
+}
+
+
+@function margin($times) {
+  @return $times * 8 + px;
+}
+
+@function padding($times) {
+  @return $times * 8 + px;
+}
+
+input,
+textarea {
+  padding: 18px 24px;
+  position: static;
+  border: 1px solid rgba(28, 25, 23, 0.1);
+  // @include Raleway;
+  // color: $gray-600;
+  // background: rgba(253, 251, 247, 0.4);
+}
+input[type="text"]:focus {
+  // border: 1px solid $primary;
+}
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active{
+  // -webkit-box-shadow: 0 0 0 40px #5c5472 inset !important;
+}
+::placeholder { /* Most modern browsers support this now. */
+  // color: rgba($gray-600, 1);
+}
+input:-webkit-autofill{
+  // -webkit-text-fill-color: $gray-600!important;
+}
+
+/************************************
+* Browser Detectors classes
+************************************/
+// .is_ios11 &,
+// .is_ios12 &,
+// .is_ios13 &,
+// .is_ie &,
+// .is_edge &,
+// .is_chrome &,
+// .is_ff &,
+// .is_safari &,
+// .is_android &
+
+
+#left-side {
+  width: 32vw;
+  border-right: 1px solid #b89df0;
+
+}
+#right-side {
+  width: 68vw;
+}

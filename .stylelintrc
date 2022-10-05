@@ -1,0 +1,15 @@
+{
+  "extends": "stylelint-config-standard",
+  "rules": {
+    "rule-empty-line-before": null,
+    "number-leading-zero": null,
+    "declaration-empty-line-before": null,
+    "at-rule-empty-line-before": null,
+    "at-rule-no-unknown": null,
+    "color-hex-length": null,
+    "no-descending-specificity": null,
+    "selector-pseudo-element-colon-notation": "single",
+    "block-no-empty": null,
+    "comment-empty-line-before": null
+  }
+}

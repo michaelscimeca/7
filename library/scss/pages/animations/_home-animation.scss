@@ -1,0 +1,38 @@
+/// Home page Tranistion Out
+#home {
+  &.content {
+    &.animate-out {
+
+      .entry-header,
+      h1 {
+        opacity: 0;
+        transform: translateX(-100px);
+      }
+
+      article .item {
+        opacity: 0;
+        transform: translateX(-100px);
+      }
+
+      .entry-header,
+      h1 {
+        transition: opacity 200ms 100ms, transform 200ms 100ms;
+      }
+
+      article {
+        .item:nth-child(1) {
+          transition: opacity 200ms 100ms, transform 200ms 100ms;
+
+        }
+
+        .item:nth-child(1) {
+          transition: opacity 200ms 150ms, transform 200ms 150ms;
+        }
+
+        .item:nth-child(2) {
+          transition: opacity 200ms 200ms, transform 200ms 200ms;
+        }
+      }
+    }
+  }
+}

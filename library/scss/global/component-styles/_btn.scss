@@ -1,0 +1,15 @@
+.btn {
+  span {
+    color: inherit;
+    white-space: nowrap;
+  }
+
+  &.primary-outline-dark {
+    // color: $second-primary;
+    // border: 1px solid rgba(20, 84, 109, 0.2);
+  }
+  @include hover {
+    // color: $second-primary;
+    // border: 1px solid rgba(20, 84, 109, 0.2);
+  }
+}

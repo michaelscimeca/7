@@ -1,0 +1,21 @@
+/// Show page Tranistion Out
+#show {
+  &.content {
+    &.animate-out {
+      @for $i from 1 through 100 {
+        article .item:nth-child(#{$i}) {
+          opacity: 0;
+          transform: translateX(-100px);
+        }
+      }
+
+      article {
+        @for $i from 1 through 100 {
+          .item:nth-child(#{$i}) {
+            transition: opacity 200ms (#{$i * 100ms}), transform 200ms (#{$i * 100ms});
+          }
+        }
+      }
+    }
+  }
+}

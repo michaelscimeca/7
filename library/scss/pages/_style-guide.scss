@@ -1,0 +1,396 @@
+#style-guide {
+  background-color: #171c28;
+  color: $white;
+  font-size: 12px;
+
+  .sg-bg {
+    border-radius: 10px;
+    overflow: hidden;
+    margin: padding(3) 0;
+  }
+
+  .sg-row {
+    display: grid;
+    align-items: center;
+    justify-items: start;
+    border-bottom: 1px solid $gray-700;
+    padding: padding(2);
+
+    &:first-child {
+      padding: padding(2) padding(2) padding(1) padding(2);
+    }
+    &:last-child {
+      border-bottom: 0px solid $gray-700;
+    }
+
+    &:nth-child(odd) {
+      background-color: #1e2330;
+    }
+    &:nth-child(even) {
+      background-color: #242836;
+    }
+
+    &.text {
+      grid-template-columns: 1fr 1fr 1fr 2fr;
+    }
+    &.buttons {
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    }
+    &.colors {
+      justify-items: center;
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    }
+
+    &.margins {
+      align-items: end;
+      justify-items: center;
+      grid-template-columns: repeat(21, 1fr);
+
+      .sg-col {
+        &:before {
+          content: '';
+          position: relative;
+          top: -2px;
+          width: 20px;
+          background-color: gray;
+        }
+        @for $i from 1 through 22 {
+          &:nth-child(#{$i}) {
+            &:before {
+              height: 4px * $i;
+            }
+          }
+        }
+
+      }
+    }
+
+  }
+  
+  .sg-col {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: flex-start;
+
+    &:before {
+      white-space: pre;
+    }
+
+    .color-box {
+      position: relative;
+      width: 80px;
+      height: 80px;
+      border-radius: 5px;
+
+      &.primary {
+        background-color: $primary;
+      }
+      &.second-primary {
+        background-color: $second-primary;
+      }
+      &.secondary {
+        background-color: $secondary;
+      }
+      &.second-secondary {
+        background-color: $second-secondary;
+      }
+      &.third {
+        background-color: $third;
+      }
+      &.black {
+        background-color: $black;
+      }
+      &.off-black {
+        background-color: $black;
+      }
+      &.white {
+        background-color: $white;
+      }
+      &.off-white {
+        background-color: $white;
+      }
+      &.gray-100 {
+        background-color: #FAFAF9;
+      }
+      &.gray-200 {
+        background-color: #F5F5F4;
+      }
+      &.gray-300 {
+        background-color: #E7E5E4;
+      }
+      &.gray-400 {
+        background-color: #D6D3D1;
+      }
+      &.gray-500 {
+        background-color: #A8A29E;
+      }
+      &.gray-600 {
+        background-color: #78716C;
+      }
+      &.gray-700 {
+        background-color: #57534E;
+      }
+      &.gray-800 {
+        background-color: #44403C;
+      }
+      &.gray-900 {
+        background-color: #292524;
+      }
+
+      &.accent-one {
+        background-color: $accent-one;
+      }
+      &.accent-two {
+        background-color: $accent-two;
+      }
+      &.accent-three {
+        background-color: $accent-three;
+      }
+      &.accent-four {
+        background-color: $accent-four;
+      }
+      &.accent-five {
+        background-color: $accent-five;
+      }
+      &.accent-six {
+        background-color: $accent-six;
+      }
+      &.accent-seven {
+        background-color: $accent-seven;
+      }
+    }
+
+    .btn {
+      display: inline-block;
+      text-decoration: none;
+      cursor: pointer;
+
+      &.xlarge {
+        height: 52px;
+        padding: 0px padding(8);
+      }
+
+      &.large {
+        height: 48px;
+        padding: 0 padding(5);
+      }
+
+      &.medium {
+        height: 44px;
+        padding: 0 padding(5);
+      }
+
+      &.small {
+        height: 32px;
+        padding: 0 padding(5);
+      }
+
+      &.default {
+        height: 40px;
+        padding: 0 padding(5);
+      }
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      margin: 0;
+    }
+
+    &.font-size {
+      position: relative;
+
+
+      &.h1 {
+        &:before {
+          position: absolute;
+          content: '#{map-get($h1, smallest-font) * 16, map-get($h1, largest-font) * 16}';
+        }
+      }
+
+      &.h2 {
+        &:before {
+          position: absolute;
+          content: '#{map-get($h2, smallest-font) * 16, map-get($h2, largest-font) * 16}';
+        }
+      }
+      &.h3 {
+        &:before {
+          position: absolute;
+          content: '#{map-get($h3, smallest-font) * 16, map-get($h3, largest-font) * 16}';
+        }
+      }
+      &.h4 {
+        &:before {
+          position: absolute;
+          content: '#{map-get($h4, smallest-font) * 16, map-get($h4, largest-font) * 16}';
+        }
+      }
+      &.h5 {
+        &:before {
+          position: absolute;
+          content: '#{map-get($h5, smallest-font) * 16, map-get($h5, largest-font) * 16}';
+        }
+      }
+      &.h6 {
+        &:before {
+          position: absolute;
+          content: '#{map-get($h6, smallest-font) * 16, map-get($h6, largest-font) * 16}';
+        }
+      }
+
+    }
+    &.font-line-height {
+      position: relative;
+
+      &.h1 {
+        &:before {
+          position: absolute;
+          content: '#{map-get($h1, smallest-line-height) * 16, map-get($h1, largest-line-height) * 16}';
+        }
+      }
+
+      &.h2 {
+        &:before {
+          position: absolute;
+          content: '#{map-get($h2, smallest-line-height) * 16, map-get($h2, largest-line-height) * 16}';
+        }
+      }
+      &.h3 {
+        &:before {
+          position: absolute;
+          content: '#{map-get($h3, smallest-line-height) * 16, map-get($h3, largest-line-height) * 16}';
+        }
+      }
+      &.h4 {
+        &:before {
+          position: absolute;
+          content: '#{map-get($h4, smallest-line-height) * 16, map-get($h4, largest-line-height) * 16}';
+        }
+      }
+      &.h5 {
+        &:before {
+          position: absolute;
+          content: '#{map-get($h5, smallest-line-height) * 16, map-get($h5, largest-line-height) * 16}';
+        }
+      }
+      &.h6 {
+        &:before {
+          position: absolute;
+          content: '#{map-get($h6, smallest-line-height) * 16, map-get($h6, largest-line-height) * 16}';
+        }
+      }
+
+    }
+    &.body-copy {
+      position: relative;
+      &.p-status {
+        position: relative;
+        &:before {
+          position: absolute;
+          content: '#{map-get($p, smallest-font) * 16, map-get($p, largest-font) * 16}';
+        }
+      }
+      &.p-xlarge-status {
+        &:before {
+          position: absolute;
+          content: '#{map-get($p-xlarge, smallest-font) * 16, map-get($p-xlarge, largest-font) * 16}';
+        }
+      }
+      &.p-large-status {
+        &:before {
+          position: absolute;
+          content: '#{map-get($p-large, smallest-font) * 16, map-get($p-large, largest-font) * 16}';
+        }
+      }
+      &.p-xmedium-status {
+        &:before {
+          position: absolute;
+          content: '#{map-get($p-xmedium, smallest-font) * 16, map-get($p-xmedium, largest-font) * 16}';
+        }
+      }
+      &.p-medium-status {
+        &:before {
+          position: absolute;
+          content: '#{map-get($p-medium, smallest-font) * 16, map-get($p-medium, largest-font) * 16}';
+        }
+      }
+      &.p-xsmall-status {
+        &:before {
+          position: absolute;
+          content: '#{map-get($p-xsmall, smallest-font) * 16, map-get($p-xsmall, largest-font) * 16}';
+        }
+      }
+      &.p-small-status {
+        &:before {
+          position: absolute;
+          content: '#{map-get($p-small, smallest-font) * 16, map-get($p-small, largest-font) * 16}';
+        }
+      }
+
+    }
+    &.body-copy-line-height {
+      position: relative;
+      &.p-status {
+        position: relative;
+        &:before {
+          position: absolute;
+          content: '#{map-get($p, smallest-line-height) * 16, map-get($p, largest-line-height) * 16}';
+        }
+      }
+      &.p-xlarge-status {
+        position: relative;
+
+        &:before {
+          position: absolute;
+          content: '#{map-get($p-xlarge, smallest-line-height) * 16, map-get($p-xlarge, largest-line-height) * 16}';
+        }
+      }
+      &.p-large-status {
+        &:before {
+          position: absolute;
+          content: '#{map-get($p-large, smallest-line-height) * 16, map-get($p-large, largest-line-height) * 16}';
+        }
+      }
+      &.p-xmedium-status {
+        &:before {
+          position: absolute;
+          content: '#{map-get($p-xmedium, smallest-line-height) * 16, map-get($p-xmedium, largest-line-height) * 16}';
+        }
+      }
+      &.p-medium-status{
+        &:before {
+          position: absolute;
+          content: '#{map-get($p-medium, smallest-line-height) * 16, map-get($p-medium, largest-line-height) * 16}';
+        }
+      }
+      &.p-xsmall-status {
+        &:before {
+          position: absolute;
+          content: '#{map-get($p-xsmall, smallest-line-height) * 16, map-get($p-xsmall, largest-line-height) * 16}';
+        }
+      }
+      &.p-small-status {
+        &:before {
+          position: absolute;
+          content: '#{map-get($p-small, smallest-line-height) * 16, map-get($p-small, largest-line-height) * 16}';
+        }
+      }
+
+    }
+  }
+
+  .info-bubble {
+    border-radius: 10px;
+    margin: margin(8) 0 margin(4) 0;
+    padding: padding(3);
+    background-color: #1e2330;
+
+  }
+
+}

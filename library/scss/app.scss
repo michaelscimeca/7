@@ -1,0 +1,29 @@
+/******************************************************************
+Theme Name: NormCore
+Theme URI:
+Description: Theme description
+Author: rsq
+Author URI: http://goodgiant.com
+Version: 2.0
+
+License:
+License URI:
+*/
+@use 'sass:math';
+@import "global/variables";
+@import "global/settings/laconic";
+@import "admin/wp-required-styles";
+@import "global/scroll/locomotive-scroll";
+@import "global/settings/foundation-settings";
+@import "global/settings/foundation/foundation";
+@import "global/settings/foundation-imports";
+@import "global/component-styles/fonts";
+@import "global/component-styles/btn";
+@import "global/global";
+@import "global/page-transitions/page-transitions";
+@import "pages/style-guide";
+@import "global/nav/nav";
+@import "global/nav/nav-animation";
+@import "pages/home";
+@import "pages/animations/home-animation";
+@import "pages/animations/show-animation";

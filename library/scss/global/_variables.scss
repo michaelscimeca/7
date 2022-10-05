@@ -1,0 +1,77 @@
+$primary: #4F9AA0;
+$second-primary: #14546D;
+$secondary: #20162f;
+$second-secondary: #124B61;
+$third: #227191;
+$black: #1C1917;
+$white: #fff;
+
+$gray-100: #FAFAF9;
+$gray-200: #F5F5F4;
+$gray-300: #E7E5E4;
+$gray-400: #D6D3D1;
+$gray-500: #A8A29E;
+$gray-600: #78716C;
+$gray-700: #57534E;
+$gray-800: #44403C;
+$gray-900: #292524;
+
+$accent-one: #83B2AC;
+$accent-two: #EEB486;
+$accent-three:  #DE744B;
+$accent-four:  #F2E1C7;
+$accent-five: #F5F3F0;
+$accent-six: #F5E9D6;
+$accent-seven: #FDFBF7;
+$success-green: #40CF56;
+$alert-orange: #FF8252;
+
+/************************************
+* IMG Path
+************************************/
+$theme-path: '/wp-content/themes/wordpress-theme-wordpress-update/library/img/';
+
+/************************************
+* Default Transition
+************************************/
+$bez-default: cubic-bezier(0.23, 1, 0.32, 1);
+$bez-default-btn: cubic-bezier(0.23, 1, 0.32, 1);
+
+
+.primary-text {
+  color: $primary;
+}
+.primary-bg {
+  background-color: $primary;
+}
+
+.second-primary-text {
+  color: $second-primary;
+}
+.second-primary-bg {
+  background-color: $second-primary;
+}
+.secondary-text {
+  color: $secondary;
+}
+.secondary-bg {
+  background-color: $secondary;
+}
+.second-secondary-text {
+  color: $second-secondary;
+}
+.second-secondary-bg {
+  background-color: $second-secondary;
+}
+.third-text {
+  color: $third;
+}
+.third-bg {
+  background-color: $third;
+}
+.black-text {
+  color: $black;
+}
+.black-bg {
+  background-color: $black;
+}
