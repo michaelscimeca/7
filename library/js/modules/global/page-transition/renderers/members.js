@@ -23,7 +23,6 @@ class Home extends Highway.Renderer {
   onEnterCompleted () {
     const font = new FontFaceObserver('Thunder');
     const hiddenEls = document.querySelectorAll('.js-ae');
-    const fireImmediately = document.querySelectorAll('.js-if-ae');
     let lastScrollTop = 0;
     let scrollDir = 'down';
 
@@ -32,20 +31,8 @@ class Home extends Highway.Renderer {
 
     });
 
-    for (let i = 0; i < hiddenEls.length; i++) {
-      // observeVisibility.default.bind(hiddenEls[i], {
-      //   callback: visibilityChanged
-      // });
-    }
-
     preloadImages().then(() => {
-      // require('../modules/global/hero')('#hero');
-      // require('../modules/load-snippets/snippets')();
-      // require('../modules/global/footer')();
 
-      // for (let i = 0; i < fireImmediately.length; i++) {
-      //   fireImmediately[i].classList.add('js-show');
-      // }
     });
 
     function visibilityChanged (isVisible, el) {
@@ -78,7 +65,6 @@ class Home extends Highway.Renderer {
   }
 
   onLeaveCompleted () {
-
     // observeVisibility.default.unbind(document.querySelector('#companies'));
     main.removeEventListener('scroll', onScroll);
   }

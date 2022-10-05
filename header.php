@@ -15,25 +15,19 @@
 </head>
 <body>
   <canvas class="webgl"></canvas>
-
-
-
-
-
-
-
     <div id="app">
     <section id="left-side">
-  <nav id="main-nav">
-    <?php $args = array(
-      'menu' => 'Main Nav',
-      'theme_location' => 'Main Nav',
-      'menu_class' => 'menu'
-      );
-      wp_nav_menu($args); ?>
-    </nav>
-  </section>
+      <nav id="main-nav">
+        <?php $args = array(
+          'menu' => 'Main Nav',
+          'theme_location' => 'Main Nav',
+          'menu_class' => 'menu'
+          );
+          wp_nav_menu($args); ?>
+        </nav>
+     </section>
+
     <section id="right-side">
-    <main data-router-wrapper>
+      <main data-router-wrapper>
 
 

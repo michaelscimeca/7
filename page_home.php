@@ -12,8 +12,9 @@
 */
 
 get_header(); ?>
+<div data-router-view="home" <?php body_class(); ?>>
 
-<div id="home"data-scroll-container>
+<div id="home" data-scroll-container>
 	<?php
 	// Start the loop.
 	if ( have_posts() ) :
@@ -26,7 +27,8 @@ get_header(); ?>
 		echo '<p>No Page Found</p>';
 	endif;
 	?>
-
 </div><!-- .content -->
+
+</div>
 
 <?php get_footer(); ?>

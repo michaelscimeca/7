@@ -6,26 +6,28 @@ import Highway from '@dogstudio/highway';
 import Tween from 'gsap';
 
 // Fade
-class Fade extends Highway.Transition {
-  in ({ from, to, done }) {
-    console.log('in');
-    main.scrollTo(0, 0);
+class Slider extends Highway.Transition {
+  in({ from, to, done }) {
+    console.log(from,to,done)
+    // Reset Scroll
+    window.scrollTo(0, 0);
+
+    // Remove Old View
     from.remove();
 
+    // Animation
     Tween.fromTo(to, 0.5,
       { opacity: 0 },
       {
         opacity: 1,
-        onComplete: function () {
-          from.remove();
-          done();
-        }
+        onComplete: done
       }
     );
   }
 
-  out ({ from, done }) {
-    console.log('from');
+  out({ from, done }) {
+    // Animation
+    console.log(from,done)
     Tween.fromTo(from, 0.5,
       { opacity: 1 },
       {
@@ -36,4 +38,4 @@ class Fade extends Highway.Transition {
   }
 }
 
-export default Fade;
+export default Slider;

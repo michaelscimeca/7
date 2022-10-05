@@ -12,6 +12,7 @@
 */
 
 get_header(); ?>
+<div data-router-view="members" <?php body_class(); ?>>
 
 <div id="members" class="content">
 
@@ -20,13 +21,14 @@ get_header(); ?>
 	if ( have_posts() ) :
 		while ( have_posts() ) : the_post();
 		// Include the page content template.
-		get_template_part( 'template-parts/content', 'members' );
+		get_template_part( 'template-parts/pages/content', 'members' );
 		// End of the loop.
 	endwhile;
 	else :
 		echo '<p>No Page Found</p>';
 	endif;
 	?>
+</div>
 
 </div><!-- .content -->
 
