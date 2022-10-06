@@ -3,17 +3,15 @@ import gsap from "gsap";
 import { OBJLoader } from "three/examples/jsm/loaders/OBJLoader";
 import Stats from 'three/examples/jsm/libs/stats.module'
 import { GUI } from 'dat.gui'
+var Emitter = require('tiny-emitter');
+var emitter = new Emitter();
 
 module.exports = () => {
 
   const canvas = document.querySelector('canvas.webgl')
-
   // Scene
   const scene = new THREE.Scene()
 
-  /**
-  * Objects
-  */
   const objectsDistance = 7
 
   // Material
@@ -199,9 +197,17 @@ document.body.appendChild(stats.dom)
   renderer.setSize(sizes.width, sizes.height)
   renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
 
+
+
   /**
   * Animate
   */
+   emitter.on('changeIt', function (data) {
+    console.log(data)
+    alert('dada')
+    // pick.position.x += -200;
+    // pick.position.y += -100;
+  });
   const clock = new THREE.Clock()
   let previousTime = 0
 
@@ -211,6 +217,7 @@ document.body.appendChild(stats.dom)
     previousTime = elapsedTime
 
     if(pick) {
+    
       for(const mesh of sectionMeshes)
       {
         pick.rotation.x += deltaTime * 0.1

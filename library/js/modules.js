@@ -4,23 +4,16 @@ import Members from './modules/global/page-transition/renderers/members';
 import Slider from './modules/global/page-transition/transitions/slide';
 const emitter = require('tiny-emitter/instance');
 
-var Modules = {
+
+const Modules = {
   init: function () {
     require('./modules/global/ua-detection')();
     require('./modules/global/scroll/scrolling')();
     require('./modules/global/reveal/scrollreavl')();
     require('./modules/global/three/three')();
-    
-    const hash = `${window.location.pathname}${window.location.hash}`;
-    const main = document.querySelector('#app main'); 
+    require('./modules/global/component/map')();
+    require('./modules/global/component/ticker')();
 
-    function scrollToMe (el, main) {
-      if (el) {
-        setTimeout(() => {
-          main.scrollTo(0, el.offsetTop);
-        }, 100);
-      }
-    }
 
     const H = new Highway.Core({
       renderers: {
@@ -28,14 +21,25 @@ var Modules = {
         members: Members,
       },
       transitions: {
-        // home: Fade,
         default: Slider
       }
     });
 
-    emitter.on('redirect', function (href) {
-      H.redirect(href);
-    });
+  H.on('NAVIGATE_IN', ({ location, from }) => {
+    emitter.emit('some-event', 'arg1 value', 'arg2 value', 'arg3 value');
+
+        if (location.anchor) {
+          const el = document.querySelector(location.anchor);
+          const main = document.querySelector('#app main');
+
+          if (el) {
+            setTimeout(() => {
+              main.scrollTo(0, el.offsetTop);
+            }, 100);
+          }
+        }
+      });
+  
   }
 };
 module.exports = Modules;

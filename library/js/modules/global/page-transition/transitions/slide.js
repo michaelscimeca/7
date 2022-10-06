@@ -1,7 +1,6 @@
-// File: fade.js
-// Import Highway
 import Highway from '@dogstudio/highway';
-
+var Emitter = require('tiny-emitter');
+var emitter = new Emitter();
 // GSAP Library
 import Tween from 'gsap';
 
@@ -9,6 +8,7 @@ import Tween from 'gsap';
 class Slider extends Highway.Transition {
   in({ from, to, done }) {
     console.log(from,to,done)
+    
     // Reset Scroll
     window.scrollTo(0, 0);
 
@@ -27,6 +27,7 @@ class Slider extends Highway.Transition {
 
   out({ from, done }) {
     // Animation
+
     console.log(from,done)
     Tween.fromTo(from, 0.5,
       { opacity: 1 },

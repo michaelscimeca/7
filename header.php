@@ -10,12 +10,13 @@
   <meta name="googlebot" content="index, follow">
   <meta name="author" content="">
   <link rel="shortcut icon" href="favicon.ico" />
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBAvdsuZcemlM3T1I7BT2EZ_rsb1gxWm4U" defer></script>
   <?php wp_head(); ?>
-
 </head>
 <body>
   <canvas class="webgl"></canvas>
     <div id="app">
+   
     <section id="left-side">
       <nav id="main-nav">
         <?php $args = array(
@@ -28,6 +29,10 @@
      </section>
 
     <section id="right-side">
+
+      <?php get_template_part( 'template-parts/compontent/content', 'ticker' ); ?>
+
+
+      <?php get_template_part( 'template-parts/compontent/content', 'map' ); ?>
+
       <main data-router-wrapper>
-
-

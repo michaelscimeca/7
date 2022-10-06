@@ -1,3 +1,7 @@
+
+
+
+
 #main-nav {
   width: 100%;
   z-index: 3;
@@ -11,6 +15,7 @@
       li {
         text-align: right;
         border-bottom: 1px solid #b89df0;
+
         a {
           padding: padding(2);
           font-family: 'Thunder';
@@ -18,7 +23,6 @@
           font-size: f-clamp(rem(60), rem(70),rem($fontScaleStop), rem($fontScaleBreak));
           line-height: f-clamp(rem(76), rem(80),rem($fontScaleStop), rem($fontScaleBreak));
         }
-
       }
     }
 
