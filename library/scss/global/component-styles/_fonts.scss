@@ -18,6 +18,29 @@ $fontScaleBreak: 1780;
 }
 
 @font-face {
+  font-family: 'poppins-regular';
+  src: url('../../library/fonts/Poppins-Regular.ttf'); /* IE9 Compat Modes */
+           font-style: normal;
+  font-weight: bold;
+  text-rendering: optimizeLegibility;
+}
+@font-face {
+  font-family: 'poppins-medium';
+  src: url('../../library/fonts/Poppins-Medium.ttf'); /* IE9 Compat Modes */
+           font-style: normal;
+  font-weight: bold;
+  text-rendering: optimizeLegibility;
+}
+@font-face {
+  font-family: 'poppins-black';
+  src: url('../../library/fonts/Poppins-Black.ttf'); /* IE9 Compat Modes */
+           font-style: normal;
+  font-weight: bold;
+  text-rendering: optimizeLegibility;
+}
+
+
+@font-face {
   font-family: "Raleways";
   // src: url("../../library/fonts/static/Raleway-Regular.ttf");
   font-display: swap;

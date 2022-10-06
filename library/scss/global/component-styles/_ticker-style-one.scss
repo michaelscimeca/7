@@ -1,0 +1,23 @@
+  .ticker-style-one {
+    position: relative;
+    width: 99.9%;
+    // height: 30px;
+    overflow: hidden;
+    cursor: pointer;
+    padding: padding(2) 0 padding(1) 0;
+    ul.list.cloned {
+      position: absolute;
+      top: 0px;
+      left: 0px;
+    }
+    ul.list li {
+      float: left;
+      padding-left: f-clamp(rem(60), rem(70),rem($fontScaleStop), rem($fontScaleBreak));
+      font-size: f-clamp(rem(60), rem(70),rem($fontScaleStop), rem($fontScaleBreak));
+      line-height: f-clamp(rem(69), rem(62),rem($fontScaleStop), rem($fontScaleBreak));
+      font-family: "Thunder";
+    }
+  }
+  
+
+  

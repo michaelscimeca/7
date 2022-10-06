@@ -74,6 +74,12 @@ require_once( 'library/functions/normcore-remove-migrate-jquery.php' );
 require_once( 'library/functions/normcore-custom-nav.php' );
 
 /***************************************************************
+* Remove Migrate Jquery
+****************************************************************/
+require_once( 'library/functions/normcore-acf.php' );
+
+
+/***************************************************************
 * Customized Excerpt function
 ****************************************************************/
 // require_once( 'library/functions/normcore-custom-excerpt.php' );

@@ -12,8 +12,8 @@ const Modules = {
     require('./modules/global/reveal/scrollreavl')();
     require('./modules/global/three/three')();
     require('./modules/global/component/map')();
-    require('./modules/global/component/ticker')();
-
+    require('./modules/global/component/ticker-style-one')();
+    require('./modules/global/component/ticker-style-two')();
 
     const H = new Highway.Core({
       renderers: {

@@ -17,8 +17,7 @@
   <canvas class="webgl"></canvas>
     <div id="app">
    
-    <section id="left-side">
-      <nav id="main-nav">
+    <nav id="main-nav">
         <?php $args = array(
           'menu' => 'Main Nav',
           'theme_location' => 'Main Nav',
@@ -26,13 +25,11 @@
           );
           wp_nav_menu($args); ?>
         </nav>
-     </section>
 
-    <section id="right-side">
 
-      <?php get_template_part( 'template-parts/compontent/content', 'ticker' ); ?>
-
+      <!-- <?php get_template_part( 'template-parts/compontent/content', 'ticker-style-one' ); ?> -->
 
       <?php get_template_part( 'template-parts/compontent/content', 'map' ); ?>
+      <?php get_template_part( 'template-parts/compontent/content', 'ticker-style-two' ); ?>
 
       <main data-router-wrapper>

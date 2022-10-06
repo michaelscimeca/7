@@ -49,12 +49,12 @@ function normcore_custom_post_types($array){
 function normcore_create_post_types(){
   $postTypes = array(
     array(
-      'name' => 'Employees',
-      'singular' => 'Employee',
-      'slug' => 'employees',
-      'add_new_item' => 'Add Employee',
-      'add_new' => 'Add Employee',
-      'edit_item' => 'Edit Employee'
+      'name' => 'Tours',
+      'singular' => 'Tours',
+      'slug' => 'tours',
+      'add_new_item' => 'Add Tour',
+      'add_new' => 'Add Tour',
+      'edit_item' => 'Edit Tour'
     )
   );
 

@@ -2,7 +2,7 @@
 const $ = require('jquery')
 const {TimelineMax, Linear} = require('gsap')
 module.exports = () => {
-  let $tickerWrapper = $(".tickerwrapper");
+  let $tickerWrapper = $(".ticker-style-one");
   let $list = $tickerWrapper.find("ul.list");
   let $clonedList = $list.clone();
   let listWidth = 10;
