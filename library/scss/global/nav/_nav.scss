@@ -1,33 +1,55 @@
-#main-nav {
-  width: 100vw;
-  z-index: 3;
-  margin: margin(4) 0;
+#nav-container {
 
-    #menu-main-nav{
-      display: flex;
-      flex-direction: row;
-      align-content: center;
-      justify-content: center;
-      align-items: center;
+  .column {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
 
-      li {
-        text-align: right;
-
-        a {
-          // font-family: 'Thunder';
-          // font-family: 'poppins-black';
-          font-family: 'poppins-medium';
-          font-size: em(16);
-          line-height: 18px;
-          text-transform: uppercase;
-          padding: padding(2);
-
-
-          // font-size: 110px;
-          // font-size: f-clamp(rem(60), rem(70),rem($fontScaleStop), rem($fontScaleBreak));
-          // line-height: f-clamp(rem(76), rem(80),rem($fontScaleStop), rem($fontScaleBreak));
+  #logo {
+    width: 100px;
+    height: 10px;
+    background-color: green;
+  }
+  #main-nav {
+    width: 100vw;
+    z-index: 3;
+    margin: margin(4) 0;
+  
+      #menu-main-nav{
+        display: flex;
+        flex-direction: row;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+  
+        li {
+          text-align: right;
+  
+          a {
+            // font-family: 'Thunder';
+            // font-family: 'poppins-black';
+            font-family: 'poppins-medium';
+            font-size: em(16);
+            line-height: 18px;
+            text-transform: uppercase;
+            padding: padding(2);
+  
+  
+            // font-size: 110px;
+            // font-size: f-clamp(rem(60), rem(70),rem($fontScaleStop), rem($fontScaleBreak));
+            // line-height: f-clamp(rem(76), rem(80),rem($fontScaleStop), rem($fontScaleBreak));
+          }
         }
       }
-    }
+  
+  }
+  
+  #second-nav {
+    background-color: blue;
+    height: 10px;
+    width: 100px;
+  }
 
 }
+

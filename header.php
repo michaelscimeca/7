@@ -15,21 +15,36 @@
 </head>
 <body>
   <canvas class="webgl"></canvas>
+
     <div id="app">
-   
-    <nav id="main-nav">
-        <?php $args = array(
-          'menu' => 'Main Nav',
-          'theme_location' => 'Main Nav',
-          'menu_class' => 'menu'
-          );
-          wp_nav_menu($args); ?>
-        </nav>
+    <div class="countdown"></div>
+    <div class="time"></div>
 
-
-      <!-- <?php get_template_part( 'template-parts/compontent/content', 'ticker-style-one' ); ?> -->
-
+      <div id="nav-container">
+        <div class="row">
+          <div class="small-12 columns">
+          <div id="logo"></div>
+         <nav id="main-nav">
+          <?php $args = array(
+            'menu' => 'Main Nav',
+            'theme_location' => 'Main Nav',
+            'menu_class' => 'menu'
+            );
+            wp_nav_menu($args); ?>
+          </nav>
+        <div id="second-nav"></div>
+          </div>
+        </div>
+      
+    
+      </div>
       <?php get_template_part( 'template-parts/compontent/content', 'map' ); ?>
-      <?php get_template_part( 'template-parts/compontent/content', 'ticker-style-two' ); ?>
 
+      <section id="tour">
+        <ul>
+        </ul>
+       </section>
+
+      
       <main data-router-wrapper>
+

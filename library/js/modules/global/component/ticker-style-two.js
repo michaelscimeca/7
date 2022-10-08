@@ -1,7 +1,8 @@
-
 const $ = require('jquery')
 const {TimelineMax, Linear} = require('gsap')
-module.exports = () => {
+module.exports = (elm) => {
+  if (document.querySelector(elm)) {
+
   let $tickerWrapper = $(".ticker-style-two");
   let $list = $tickerWrapper.find("ul.list");
   let $clonedList = $list.clone();
@@ -21,7 +22,7 @@ module.exports = () => {
 
   //TimelineMax
   let infinite = new TimelineMax({repeat: -1, paused: true});
-  let time = 40;
+  let time = 200;
 
   infinite
     .fromTo($list, time, {rotation:0.01,x:0}, {force3D:true, x: -listWidth, ease: Linear.easeNone}, 0)
@@ -35,7 +36,6 @@ module.exports = () => {
 
     let pc = document.querySelector('#buy');
     if(pc) {
-
       pc.addEventListener('mouseenter', e => {
         dragCursor.classList.add('active');
       },true);
@@ -52,4 +52,5 @@ module.exports = () => {
         dragCursor.style.transform = `translate(${x}px, ${y}px)`;
       },true);
     }
+  }
   }

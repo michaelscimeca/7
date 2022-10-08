@@ -80,23 +80,23 @@ module.exports = () => {
     const stats = Stats()
 document.body.appendChild(stats.dom)
 
-// const gui = new GUI()
-// const cubeFolder = gui.addFolder('event')
-// cubeFolder.add(pick.position, 'x', -100,100)
-// cubeFolder.add(pick.position, 'y', -100,100)
-// cubeFolder.add(pick.position, 'z', -100,100)
-// cubeFolder.add(pick.rotation, 'x', -100,100)
-// cubeFolder.add(pick.rotation, 'y', -100,100)
-// cubeFolder.add(pick.rotation, 'z', -100,100)
+const gui = new GUI()
+const cubeFolder = gui.addFolder('event')
+cubeFolder.add(pick.position, 'x', -100,100)
+cubeFolder.add(pick.position, 'y', -100,100)
+cubeFolder.add(pick.position, 'z', -100,100)
+cubeFolder.add(pick.rotation, 'x', -100,100)
+cubeFolder.add(pick.rotation, 'y', -100,100)
+cubeFolder.add(pick.rotation, 'z', -100,100)
 
 
-// cubeFolder.open()
-// const cameraFolder = gui.addFolder('Camera')
-// cameraFolder.add(camera.position, 'x', 0, 10)
-// cameraFolder.add(camera.position, 'y', 0, 10)
-// cameraFolder.add(camera.position, 'z', 0, 10)
+cubeFolder.open()
+const cameraFolder = gui.addFolder('Camera')
+cameraFolder.add(camera.position, 'x', 0, 10)
+cameraFolder.add(camera.position, 'y', 0, 10)
+cameraFolder.add(camera.position, 'z', 0, 10)
 
-// cameraFolder.open()
+cameraFolder.open()
 
   });
 
@@ -144,22 +144,9 @@ document.body.appendChild(stats.dom)
   window.addEventListener('scroll', () =>
   {
     scrollY = window.scrollY
-    const newSection = Math.round(scrollY / sizes.height)
-
-    if(newSection != currentSection)
-    {
-      currentSection = newSection
-
-      gsap.to(
-        sectionMeshes[currentSection].rotation,
-        {
-          duration: 1.5,
-          ease: 'power2.inOut',
-          x: '+=6',
-          y: '+=3'
-        }
-      )
-    }
+      console.log((Math.cos(window.scrollY)) * 125)
+ 
+      pick.position.x = (Math.cos(window.scrollY)) * 0.25;
   })
 
   /**
@@ -217,12 +204,10 @@ document.body.appendChild(stats.dom)
     previousTime = elapsedTime
 
     if(pick) {
-    
-      for(const mesh of sectionMeshes)
-      {
-        pick.rotation.x += deltaTime * 0.1
-        pick.rotation.y += deltaTime * 0.12
-      }
+      // pick.position.x = Math.cos( deltaTime ) * 0.75 + 5.25;
+      // Math.PI * 0.25
+      // pick.rotation.x += deltaTime * 0.1
+
     }
 
     // Animate meshes

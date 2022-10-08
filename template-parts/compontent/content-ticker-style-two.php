@@ -8,53 +8,53 @@
 ?>
 <section data-scroll-section id="buy">
   <div id="pick"></div>
-<div class="ticker-style-two">
+<a class="ticker-style-two">
    <ul class='list'>
       <li class='listitem'>
-        <span>This is list item 1</span>
+        <span>New CD Spinner</span>
       </li>
       <li class='listitem'>
-        <span>This is list item 2</span>
+      <span>New CD Spinner</span>
       </li>
       <li class='listitem'>
-        <span>This is list item 3</span>
+      <span>New CD Spinner</span>
       </li>
       <li class='listitem'>
-        <span>This is list item 4</span>
+      <span>New CD Spinner</span>
       </li>
       <li class='listitem'>
-        <span>This is list item 5</span>
+      <span>New CD Spinner</span>
       </li>
       <li class='listitem'>
-        <span>This is list item 1</span>
+      <span>New CD Spinner</span>
       </li>
       <li class='listitem'>
-        <span>This is list item 2</span>
+      <span>New CD Spinner</span>
       </li>
       <li class='listitem'>
-        <span>This is list item 3</span>
+      <span>New CD Spinner</span>
       </li>
       <li class='listitem'>
-        <span>This is list item 4</span>
+      <span>New CD Spinner</span>
       </li>
       <li class='listitem'>
-        <span>This is list item 5</span>
+      <span>New CD Spinner</span>
       </li>
      <li class='listitem'>
-        <span>This is list item 1</span>
+     <span>New CD Spinner</span>
       </li>
       <li class='listitem'>
-        <span>This is list item 2</span>
+      <span>New CD Spinner</span>
       </li>
       <li class='listitem'>
-        <span>This is list item 3</span>
+      <span>New CD Spinner</span>
       </li>
       <li class='listitem'>
-        <span>This is list item 4</span>
+      <span>New CD Spinner</span>
       </li>
       <li class='listitem'>
-        <span>This is list item 5</span>
+      <span>New CD Spinner</span>
       </li>
   </ul>
-</div>
+</a>
 </section>

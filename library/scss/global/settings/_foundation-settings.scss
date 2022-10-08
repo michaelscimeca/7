@@ -117,7 +117,7 @@ $breakpoints: (
   medium: 600px,
   large: 1000px,
   xlarge: 1200px,
-  xxlarge: 1440px,
+  xxlarge: 1740px,
 );
 $print-breakpoint: large;
 $breakpoint-classes: (small medium large xlarge xxlarge);
@@ -129,7 +129,7 @@ $grid-row-width: $global-width;
 $grid-column-count: 12;
 $grid-column-gutter: (
   small: 30px,
-  medium: 30px,
+  medium: 80px,
 );
 $grid-column-align-edge: true;
 $grid-column-alias: 'columns';

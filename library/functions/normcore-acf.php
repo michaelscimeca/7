@@ -517,11 +517,10 @@ function init_wp_rest_multiple_post_type_endpoint()
 add_filter( 'register_post_type_args', 'my_post_type_args', 10, 2 );
 
 function my_post_type_args( $args, $post_type ) {
-
-  if ( 'tours' === $post_type ) {
+  if ( 'event_listing' === $post_type ) {
     $args['show_in_rest'] = true;
     // Optionally customize the rest_base or rest_controller_class
-    $args['rest_base']             = 'tours';
+    $args['rest_base']             = 'event_listing';
     $args['rest_controller_class'] = 'WP_REST_Posts_Controller';
   }
 
@@ -529,13 +528,15 @@ function my_post_type_args( $args, $post_type ) {
 }
 
 add_filter( 'rest_endpoints', function( $endpoints ){
-  if ( isset( $endpoints['/wp/v2/users'] ) ) {
-    unset( $endpoints['/wp/v2/users'] );
+  if ( isset( $endpoints['/wp/v3/users'] ) ) {
+    unset( $endpoints['/wp/v3/users'] );
   }
-  if ( isset( $endpoints['/wp/v2/users/(?P<id>[\d]+)'] ) ) {
-    unset( $endpoints['/wp/v2/users/(?P<id>[\d]+)'] );
+  if ( isset( $endpoints['/wp/v3/users/(?P<id>[\d]+)'] ) ) {
+    unset( $endpoints['/wp/v3/users/(?P<id>[\d]+)'] );
   }
   return $endpoints;
 });
+
+
 
 ?>

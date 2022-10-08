@@ -1,7 +1,7 @@
 import Highway from '@dogstudio/highway';
 import imagesLoaded from 'imagesLoaded';
 const FontFaceObserver = require('fontfaceobserver');
-// const observeVisibility = require('./modules/global/reveal/observe-visibility.js');
+const observeVisibility = require('../../reveal/observe-visibility');
 const main = document.querySelector('#app main');
 
 let onScroll;
@@ -11,7 +11,7 @@ const preloadImages = () => {
   });
 };
 
-class Members extends Highway.Renderer {
+class Style extends Highway.Renderer {
   // Hooks/methods
   onEnter () {
     main.scrollTo(0, 0);
@@ -28,10 +28,14 @@ class Members extends Highway.Renderer {
 
     // Listen for @font-face to be loaded to transform text
     font.load().then(function () {
-
+      alert('d')
+      require('../../scroll/scrolling')();
     });
 
+
+
     preloadImages().then(() => {
+      // require('../../scroll/scrolling')();
 
     });
 
@@ -71,4 +75,4 @@ class Members extends Highway.Renderer {
 }
 
 // Don`t forget to export your renderer
-export default Members;
+export default Style;

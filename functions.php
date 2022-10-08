@@ -95,4 +95,23 @@ if ( ! isset( $content_width ) ) { $content_width = 1600; }
     }
     return $endpoints;
 });
+
+
+?>
+<?php
+
+// Hooked up to RSQ Google Creds located in rsqcampaign accout
+function my_acf_google_map_api( $api ){
+  $api['key'] = 'AIzaSyBAvdsuZcemlM3T1I7BT2EZ_rsb1gxWm4U';
+  return $api;
+}
+add_filter('acf/fields/google_map/api', 'my_acf_google_map_api');
+
+// Method 2: Setting.
+function my_acf_init() {
+  acf_update_setting('google_api_key', 'AIzaSyBAvdsuZcemlM3T1I7BT2EZ_rsb1gxWm4U');
+}
+add_action('acf/init', 'my_acf_init');
+
+
 ?>

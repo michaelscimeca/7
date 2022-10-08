@@ -18,8 +18,8 @@ html {
   position: relative;
   height: 100%;
   // @include Raleway;
-  background-color: $secondary;
-  background: linear-gradient(to right, rgba(147,82,255,1) 2%,rgba(101,8,255,1) 100%);
+  background-color: $black;
+  // background: linear-gradient(to right, rgba(147,82,255,1) 2%,rgba(101,8,255,1) 100%);
   color: $white;
 
   &:before {
@@ -52,7 +52,7 @@ html {
 }
 
 canvas {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   pointer-events: none;

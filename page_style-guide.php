@@ -12,9 +12,8 @@
 */
 
 get_header(); ?>
-
+<div data-router-view="style" <?php body_class(); ?>>
 <div id="style-guide" data-scroll-container>
-
 	<?php
 	// Start the loop.
 	if ( have_posts() ) :
@@ -29,5 +28,6 @@ get_header(); ?>
 	?>
 
 </div><!-- .content -->
+</div>
 
 <?php get_footer(); ?>
