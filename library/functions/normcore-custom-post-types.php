@@ -55,6 +55,14 @@ function normcore_create_post_types(){
       'add_new_item' => 'Add Tour',
       'add_new' => 'Add Tour',
       'edit_item' => 'Edit Tour'
+    ),
+    array(
+      'name' => 'Hero Videos',
+      'singular' => 'Hero-Videos',
+      'slug' => 'hero-videos',
+      'add_new_item' => 'Add video',
+      'add_new' => 'Add video',
+      'edit_item' => 'Edit video'
     )
   );
 

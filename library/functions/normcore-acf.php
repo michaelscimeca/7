@@ -524,8 +524,16 @@ function my_post_type_args( $args, $post_type ) {
     $args['rest_controller_class'] = 'WP_REST_Posts_Controller';
   }
 
+  if ( 'hero-videos' === $post_type ) {
+    $args['show_in_rest'] = true;
+    // Optionally customize the rest_base or rest_controller_class
+    $args['rest_base']             = 'hero-videos';
+    $args['rest_controller_class'] = 'WP_REST_Posts_Controller';
+  }
+
   return $args;
 }
+
 
 add_filter( 'rest_endpoints', function( $endpoints ){
   if ( isset( $endpoints['/wp/v3/users'] ) ) {

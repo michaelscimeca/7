@@ -1,0 +1,72 @@
+@charset "UTF-8";
+
+// ==========================================================================
+// Plyr styles
+// https://github.com/sampotts/plyr
+// TODO: Review use of BEM classnames
+// ==========================================================================
+
+@import 'lib/css-vars';
+
+$css-vars-use-native: true;
+
+@import 'settings/breakpoints';
+@import 'settings/colors';
+@import 'settings/cosmetics';
+@import 'settings/type';
+@import 'settings/badges';
+@import 'settings/captions';
+@import 'settings/controls';
+@import 'settings/helpers';
+@import 'settings/menus';
+@import 'settings/progress';
+@import 'settings/sliders';
+@import 'settings/tooltips';
+@import 'lib/animation';
+@import 'lib/functions';
+@import 'lib/mixins';
+@import 'base';
+@import 'components/badges';
+@import 'components/control';
+@import 'components/controls';
+@import 'components/menus';
+@import 'components/sliders';
+@import 'components/poster';
+@import 'components/times';
+@import 'components/tooltips';
+@import 'components/progress';
+@import 'components/volume';
+@import 'types/audio';
+@import 'types/video';
+@import 'states/fullscreen';
+@import 'plugins/ads';
+@import 'plugins/preview-thumbnails/index';
+@import 'utils/animation';
+@import 'utils/hidden';
+
+.plyr {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 2;
+    // opacity: 0;
+    transition: all 2s ease-in-out;
+ }
+ .plyr iframe {
+    width: 100vw;
+    height: 56.25vw; /* Given a 16:9 aspect ratio, 9/16*100 = 56.25 */
+    min-height: 100vh;
+    min-width: 177.77vh; /* Given a 16:9 aspect ratio, 16/9*100 = 177.77 */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+ }
+
+ .plyr.loaded {
+   opacity: 1;
+ }

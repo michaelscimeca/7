@@ -13,6 +13,9 @@
 
 get_header(); ?>
 <div data-router-view="home" <?php body_class(); ?>>
+
+
+
 <div id="home" data-scroll-container>
 	<?php
 	// Start the loop.

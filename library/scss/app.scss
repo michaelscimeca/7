@@ -10,6 +10,7 @@ License:
 License URI:
 */
 @use 'sass:math';
+
 @import "global/variables";
 @import "global/settings/laconic";
 @import "admin/wp-required-styles";
@@ -24,13 +25,21 @@ License URI:
 @import "pages/style-guide";
 @import "global/nav/nav";
 @import "global/nav/nav-animation";
+@import "global/nav/footer-nav";
+
 @import "pages/home";
 @import "pages/animations/home-animation";
 @import "pages/animations/show-animation";
-
+@import "global/component-styles/plyr/plyr";
 
 @import "global/component-styles/ticker-style-one";
 @import "global/component-styles/ticker-style-two";
+@import "global/component-styles/ticker-style-btn";
 
 @import "global/component-styles/map";
-@import "global/component-styles/tour";
+@import "global/component-styles/video";
+
+.swiper-slide {
+    height: 100vh;
+    width: 100vw;
+}

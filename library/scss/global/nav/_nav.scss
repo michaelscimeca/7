@@ -1,31 +1,52 @@
 #nav-container {
+  position: fixed;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  width: 100vw;
+  height: 60px;
+  border-right: 1px solid $white;
+  // padding-top: 32px;
+  z-index: 2;
 
   .column {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-end;
+
   }
 
   #logo {
-    width: 100px;
-    height: 10px;
-    background-color: green;
+    width: 130px;
+    height: 30px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url($theme-path + '7thheavenlogo.svg');
+    overflow: hidden;
+    white-space: nowrap;
+    text-indent: 100%;
+    justify-self: center;
+flex: auto;
+position: absolute;
+left: 0;
+right: 0;
+margin: 0 auto;
   }
+
   #main-nav {
-    width: 100vw;
+    // width: 100vw;
     z-index: 3;
-    margin: margin(4) 0;
-  
+    // margin: margin(4) 0;
+
       #menu-main-nav{
         display: flex;
-        flex-direction: row;
         align-content: center;
         justify-content: center;
         align-items: center;
-  
+
         li {
           text-align: right;
-  
+
           a {
             // font-family: 'Thunder';
             // font-family: 'poppins-black';
@@ -33,23 +54,38 @@
             font-size: em(16);
             line-height: 18px;
             text-transform: uppercase;
-            padding: padding(2);
-  
-  
+            // padding: padding(2);
+            white-space: nowrap;
+
+
             // font-size: 110px;
             // font-size: f-clamp(rem(60), rem(70),rem($fontScaleStop), rem($fontScaleBreak));
             // line-height: f-clamp(rem(76), rem(80),rem($fontScaleStop), rem($fontScaleBreak));
           }
         }
       }
-  
+
   }
-  
+
   #second-nav {
-    background-color: blue;
-    height: 10px;
-    width: 100px;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+
+    a {
+      display: flex;
+      align-content: center;
+      justify-content: center;
+      align-items: center;
+      height: 60px;
+      width: 100px;
+      // padding: 0 padding(2);
+      // margin: margin(1);
+      border-radius: 20px;
+      white-space: nowrap;
+      text-transform: uppercase;
+      font-size: em(14);
+    }
   }
-
 }
-

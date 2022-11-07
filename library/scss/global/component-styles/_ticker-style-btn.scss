@@ -1,0 +1,75 @@
+#pick {
+  position: absolute;
+  top: 0;
+  z-index: 11;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: #000;
+  opacity: 0;
+  pointer-events: none;
+
+  &:before {
+    content: 'Buy Now!';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -13px;
+    margin-left: -34px;
+    width: 100%;
+    height: 100%;
+    color: $white;
+  }
+
+  &.active {
+    opacity: 1;
+  }
+}
+
+#buy {
+  position: relative;
+  border-radius: 100px;
+  overflow: hidden;
+  background-color: rgba(purple, 0.95);
+  pointer: none;
+
+  .ticker-style-two {
+    position: relative;
+    display: block;
+    width: 99.9%;
+    overflow: hidden;
+    cursor: pointer;
+
+
+    ul {
+      pointer-events: none;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      &.list.cloned {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+      }
+      &.list li {
+        float: left;
+        span {
+          position: relative;
+          top: 8%;
+          white-space: nowrap;
+          font-family: "Thunder";
+          padding-left: f-clamp(rem(60), rem(100),rem($fontScaleStop), rem($fontScaleBreak));
+          font-size: f-clamp(rem(200), rem(300),rem($fontScaleStop), rem($fontScaleBreak));
+          line-height: .8;
+          text-transform: uppercase;
+        }
+     
+      }
+    }
+  }
+
+  a {
+    display: block;
+    padding: padding(8) 0;
+  }
+}

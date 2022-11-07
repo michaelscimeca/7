@@ -6,52 +6,29 @@
 * @since NormCore 2.0
 */
 ?>
-<section data-scroll-section class="ticker-style-one">
-   <ul class='list'>
-      <li class='listitem'>
-        <span>This is list item 1</span>
-      </li>
-      <li class='listitem'>
-        <span>This is list item 2</span>
-      </li>
-      <li class='listitem'>
-        <span>This is list item 3</span>
-      </li>
-      <li class='listitem'>
-        <span>This is list item 4</span>
-      </li>
-      <li class='listitem'>
-        <span>This is list item 5</span>
-      </li>
-      <li class='listitem'>
-        <span>This is list item 1</span>
-      </li>
-      <li class='listitem'>
-        <span>This is list item 2</span>
-      </li>
-      <li class='listitem'>
-        <span>This is list item 3</span>
-      </li>
-      <li class='listitem'>
-        <span>This is list item 4</span>
-      </li>
-      <li class='listitem'>
-        <span>This is list item 5</span>
-      </li>
-     <li class='listitem'>
-        <span>This is list item 1</span>
-      </li>
-      <li class='listitem'>
-        <span>This is list item 2</span>
-      </li>
-      <li class='listitem'>
-        <span>This is list item 3</span>
-      </li>
-      <li class='listitem'>
-        <span>This is list item 4</span>
-      </li>
-      <li class='listitem'>
-        <span>This is list item 5</span>
-      </li>
+
+<div class="timeline">
+  <ul class="list">
+    <li class="sub-list">
+      <p><span>© 2018 Niccolò Miranda</span></p>
+    </li>
+    <li class="sub-list">
+      <p><span>All Rights Reserved </span></p>
+    </li>
+     <li class="sub-list">
+      <p><span>P.IVA IT02305470441   </span></p>
+    </li>
+     <li class="sub-list">
+      <p><span>Privacy Policy</span></p>
+    </li>
+     <li class="sub-list">
+      <p><span>Terms of Service</span></p>
+    </li>
   </ul>
+</div>
+<section id="ticker-style-one-container">
+  <div class="ticker-style-one">
+
+  </div>
+
 </section>

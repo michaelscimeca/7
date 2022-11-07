@@ -1,0 +1,24 @@
+
+#video-container-sliders {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: calc(100vh - 100px);
+  width: calc(100vw - 60px);
+  margin: 60px 30px 40px;
+  border-radius: 20px;
+  overflow: hidden;
+  background-color: black;
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    box-shadow: 0px 0px 400px 16px rgba(0,0,0,0.75) inset;
+    z-index: 3;
+    pointer-events: none;
+  }
+}

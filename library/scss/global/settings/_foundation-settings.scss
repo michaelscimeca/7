@@ -67,7 +67,7 @@
 // ---------
 
 $global-font-size: 100%;
-$global-width: rem-calc(1600);
+$global-width: rem-calc(1300);
 $global-lineheight: 1.5;
 $foundation-palette: (
   primary: #4adada,
@@ -117,7 +117,7 @@ $breakpoints: (
   medium: 600px,
   large: 1000px,
   xlarge: 1200px,
-  xxlarge: 1740px,
+  xxlarge: 1640px,
 );
 $print-breakpoint: large;
 $breakpoint-classes: (small medium large xlarge xxlarge);
@@ -129,7 +129,7 @@ $grid-row-width: $global-width;
 $grid-column-count: 12;
 $grid-column-gutter: (
   small: 30px,
-  medium: 80px,
+  medium: 60px,
 );
 $grid-column-align-edge: true;
 $grid-column-alias: 'columns';
